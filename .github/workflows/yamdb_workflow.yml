@@ -29,7 +29,8 @@ jobs:
     needs: tests
     steps:
       - name: Change directory to api_yamdb
-        uses: cd api_yamdb/
+        run: |
+          cd api_yamdb/
       - name: Check out the repo
         uses: actions/checkout@v2 
       - name: Set up Docker Buildx
