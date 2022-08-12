@@ -1,27 +1,24 @@
+from api.filters import TitlesFilter
+from api.mixins import ListCreateDestroyViewSet
+from api.permissions import (IsAdmin, IsAdminModeratorOwnerOrReadOnly,
+                             IsAdminOrReadOnly)
 from django.contrib.auth.tokens import default_token_generator
-from django.shortcuts import get_object_or_404
-from rest_framework.decorators import action, api_view, permission_classes
 from django.core.mail import send_mail
-from rest_framework import viewsets, filters, permissions, status
-from django_filters.rest_framework import DjangoFilterBackend
 from django.db.models import Avg
+from django.shortcuts import get_object_or_404
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework import filters, permissions, status, viewsets
+from rest_framework.decorators import action, api_view, permission_classes
 from rest_framework.pagination import PageNumberPagination
 from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import AccessToken
+from reviews.models import Category, Genre, Review, Title, User
 
-from api.mixins import ListCreateDestroyViewSet
-from reviews.models import Category, Genre, Title, Review, User
-from .serializers import (
-    CategorySerializer, GenreSerializer,
-    TitleSerializer, ReviewSerializer,
-    CommentSerializer, UserEditSerializer,
-    UserSerializer, RegisterDataSerializer,
-    TokenSerializer, ReadOnlyTitleSerializer
-)
-from api.filters import TitlesFilter
-from api.permissions import (
-    IsAdminOrReadOnly, IsAdminModeratorOwnerOrReadOnly, IsAdmin
-)
+from .serializers import (CategorySerializer, CommentSerializer,
+                          GenreSerializer, ReadOnlyTitleSerializer,
+                          RegisterDataSerializer, ReviewSerializer,
+                          TitleSerializer, TokenSerializer, UserEditSerializer,
+                          UserSerializer)
 
 
 class UserViewSet(viewsets.ModelViewSet):
