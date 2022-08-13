@@ -24,6 +24,7 @@ jobs:
   custom_tests:
     runs-on: ubuntu-latest
     name: Test project with custom Yandex tests
+    needs: flake8_tests
     steps: 
     - name: Check out the repo
       uses: actions/checkout@v2
@@ -42,7 +43,7 @@ jobs:
   build_and_push_to_docker_hub:
     runs-on: ubuntu-latest
     name: Push Docker image to Docker Hub
-    needs: tests
+    needs: custom_tests
     steps:
       - name: Check out the repo
         uses: actions/checkout@v2
