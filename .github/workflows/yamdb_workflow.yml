@@ -4,7 +4,7 @@ jobs:
 
   flake8_tests: 
     runs-on: ubuntu-latest
-    name: Test project with flake8 and custom tests
+    name: Test project with flake8
     steps:
     - name: Check out the repo
       uses: actions/checkout@v2
