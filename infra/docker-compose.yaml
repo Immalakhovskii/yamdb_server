@@ -14,7 +14,7 @@ services:
     restart: always
     command: >
       sh -c "python manage.py collectstatic --noinput &&
-             cp redoc.yaml ./static/
+             cp redoc.yaml ./static/ &&
              python manage.py makemigrations &&
              python manage.py migrate &&
              python manage.py runserver 0.0.0.0:8000"
