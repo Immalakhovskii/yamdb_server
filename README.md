@@ -12,4 +12,5 @@ On every push to GitHub the project has workflow with 5 ateps:
 - Send message in Telegram after successful deploy
 
 ![Workflow badge](https://github.com/Immalakhovskii/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
+
 *Workflow fails now because of failing deploy on server*
