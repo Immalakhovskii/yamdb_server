@@ -4,7 +4,7 @@
 #### Technology Stack ####
 Python 3.7 / Django 2.2.16 / Django REST framework 3.12.4 / Docker 20.10.17 / PostgreSQL 13.0
 #### GitHub Actions ####
-On every push to GitHub the project has workflow with 5 ateps:
+On every push to GitHub the project has workflow with 5 steps:
 - Flake8 tests
 - Custom tests
 - Build and push updated backend Docker image to Docker Hub
