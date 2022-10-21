@@ -1,5 +1,6 @@
 # YaMDb (Server Edition) #
 ![Workflow badge](https://github.com/Immalakhovskii/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg?event=push)
+
 *This is version of API service YaMDb which automatically deploys to private server on every push via GitHub Actions. Virtual machine stopped for now (workflow fails now because of failing deploy on server). You can read full description of the project and try out dockered local edition of YaMDb here: https://github.com/Immalakhovskii/yamdb_docker*
 ****
 ### Technology Stack ###
